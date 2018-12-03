@@ -1,0 +1,11 @@
+@charset "utf-8";
+/*
+   Author: Andrew Luehrs
+   Date:   12/2/18
+
+   Filename: ar_styles.css
+*/
+
+body {
+	background-image: url(ar_background.jpg);
+}
