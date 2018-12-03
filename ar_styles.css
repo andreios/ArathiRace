@@ -7,5 +7,25 @@
 */
 
 body {
+	width: 95%;
+	min-width: 720px;
+	max-width: 1280px;
 	background-image: url(ar_background.jpg);
+}
+
+img {	/* need to find a better way to define size */
+	display: block;
+	width: 15%;
+}
+
+img#greenGate {
+	display: none;
+}
+
+img#hordeVictory {
+	display: none;
+}
+
+img#allyVictory {
+	display: none;
 }
