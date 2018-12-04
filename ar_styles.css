@@ -4,28 +4,75 @@
    Date:   12/2/18
 
    Filename: ar_styles.css
+
+	General styles.
 */
 
+
+
+html {
+	height: 100%;
+}
+
+header {
+	text-align: center;
+}
+
 body {
-	width: 95%;
+	position: absolute;
+	
+	width: 100%;
 	min-width: 720px;
-	max-width: 1280px;
+	max-width: 1280;
+	min-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	
 	background-image: url(ar_background.jpg);
 }
 
-img {	/* need to find a better way to define size */
-	display: block;
-	width: 15%;
+div{
+	outline: 1px solid red;
 }
 
-img#greenGate {
-	display: none;
+img#hordeRacer {
+	position: relative;
 }
+
+img#allyRacer {
+	position: relative;
+}
+
 
 img#hordeVictory {
+	position: absolute;
+	top: 200px;
+	left: 45%;
 	display: none;
 }
 
 img#allyVictory {
+	position: absolute;
+	top: 200px;
+	left: 45%;
 	display: none;
+}
+
+img#resource {
+	position: absolute;
+	right: 0px;
+	top: 300px;
+	
+}
+
+img#startgate {
+	position: relative;
+	left: 45%;
+}
+
+footer {
+	position: relative;
+	bottom: 0px;
+	text-align: center;
+	color: lightgray;
 }

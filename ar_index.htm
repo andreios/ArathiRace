@@ -8,35 +8,53 @@
 -->
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+	<head>
+	  <meta charset="utf-8">
 
-  <title>The Great Arathi Race</title>
-  <meta name="description" content="HTML5 Template">
-	
-	<link href="ar_styles.css" rel="stylesheet" />
-	
-	<script src="ar_race.js" async></script>
+	  <title>The Great Arathi Race</title>
+	  <meta name="description" content="HTML5 Template">
 
-</head>
+<!--		<link href="ar_grid.css" rel="stylesheet" />-->
+		<link href="ar_styles.css" rel="stylesheet" />
 
-<body>
-	<header>
-		<h1>The Great Arathi Race</h1>
-	</header>
+		<script src="ar_race.js" async></script>
+
+	</head>
+
+	<body>
+		<header>
+			<h1>The Great Arathi Race</h1>
+			<h3>The war between Horde and Alliance has come to the Arathi Highlands, and warriors from each faction race to claim the area's valuable resources to gain strategic advantage!</h3>
+			<h3>Click on the gateway to start the combatants across the hills of Arathor.</h3>
+		</header>
+
+		<div class="row">
+			<div class="col-1-10">
+				<div class="row">
+					<img src="OrcRaider.png" id="hordeRacer" alt="Orc Raider" />
+				</div>
+				<div class="row" id="start">
+					<img src="HumanKnight.png" id="allyRacer" alt="Human Knight" />
+				</div>
+			</div>
+			<div class="col-4-5">
+				<h1 id="victoryMessage"></h1>
+				<img src="HordeBanner.png" id="hordeVictory" alt="Horde Victory!" />
+				<img src="AllianceBanner.png" id="allyVictory" alt="Alliance Victory!" />
+			</div>
+			<div class="col-1-10">
+				<img src="resource_pile.png" id="resource" alt="War Resources" />
+			</div>
+		</div>
+		<div class="row" >
+			<img src="gate_red.png" id="startgate" alt=""/>
+		</div>
+		
+		<footer>
+			World of Warcraft and all related names and images used on this page are the intellectual property of Blizzard Entertainment.
+		</footer>
+	</body>
 	
-	<section id="intro">
-		<p>The war between Horde and Alliance has come to the Arathi Highlands, and warriors from each faction race to claim the area's valuable resources to gain strategic advantage!</p>
-		<p>Click on the gateway to start the combatants across the hills of Arathor.</p>
-	</section>
 	
-		<img src="gate_red.png" id="redGate" alt=""/>
-		<img src="gate_green.png" id="greenGate" alt="" />
 	
-		<img src="OrcRaider.png" id="hordeRacer" alt="" />
-		<img src="HumanKnight.png" id="allyRacer" alt="" />
-	
-		<img src="HordeBanner.png" id="hordeVictory" hidden alt="" />
-		<img src="AllianceBanner.png" id="allyVictory" hidden alt="" />
-</body>
 </html>
