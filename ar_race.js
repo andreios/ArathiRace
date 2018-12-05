@@ -50,7 +50,7 @@ function startRace() {
 
 function runRace(){
 	//establishes target for victory
-	var threshold = (0.82 * window.innerWidth)-200;
+	var threshold = (0.82 * window.innerWidth)-orc.width;	//orc and human are set to have the same width in stylesheet
 
 	advanceRacers(orc);
 	advanceRacers(human);
