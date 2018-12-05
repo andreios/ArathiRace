@@ -16,6 +16,7 @@ var gate = document.getElementById("startgate");
 var victoryMessage = document.getElementById("victoryMessage");
 var victoryBanner = document.getElementById("victoryBanner");
 var resetMessage = document.getElementById("resetMessage");
+var startMessage = document.getElementById("startMessage");
 	
 var loopClock;
 
@@ -28,6 +29,8 @@ function init(){
 	orc.style.left = "0px";
 	human.style.left = "0px";
 	
+	startMessage.innerHTML = "Click on the red portal to start the combatants across the hills of Arathor.";
+	
 	//add listener to gate image
 	gate.src = "gate_red.png";
 	gate.onclick = startRace;
@@ -37,15 +40,13 @@ function startRace() {
 	//swap red gate to green gate
 	gate.src = "gate_green.png";
 	gate.onclick = null;
+	startMessage.innerHTML = "The race is on!";
 
 //	runRace();
 	loopClock = setInterval(runRace, 50);
 }
 
 function runRace(){
-	//boolean variables to test win condition; may not be needed
-	var winner = "";
-
 	//establishes target for victory
 	var threshold = (0.82 * window.innerWidth)-200;
 
@@ -79,23 +80,24 @@ function winScreen(winner) {
 	//based on winner, set victory message, banner, and display them
 	if (winner === "horde"){
 		victoryMessage.innerHTML = "Victory For the Horde!";
-		victoryMessage.style.color = "red";
+		victoryMessage.style.color = "firebrick";
 		victoryBanner.src = "HordeBanner.png";
-//		victoryBanner.style.display = "table";
 	} else if (winner === "alliance") {
 		victoryMessage.innerHTML = "Victory For the Alliance!";
-		victoryMessage.style.color = "blue";
+		victoryMessage.style.color = "mediumblue";
 		victoryBanner.src = "AllianceBanner.png";
-//		victoryBanner.style.display = "table";
 	}
 	resetMessage.innerHTML = "Click on the green portal to reset the race.";
+	resetMessage.style.color = "ghostwhite";
 	
 	gate.onclick = raceReset;
+	victoryBanner.onclick = raceReset;
 
 }
 
 function raceReset() {
 	gate.onclick = null;
+	victoryBanner.onclick = null;
 	victoryMessage.innerHTML = "";
 	resetMessage.innerHTML = "";
 	victoryBanner.src = "";
