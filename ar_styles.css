@@ -66,11 +66,15 @@ img {
 img#hordeRacer {
 	position: relative;
 	filter: drop-shadow(0px 0px 3px firebrick);
+	width: 150%;
+	max-width: 200px;
 }
 
 img#allyRacer {
 	position: relative;
 	filter: drop-shadow(0px 0px 3px mediumblue);
+	width: 150%;
+	max-width: 200px;
 }
 
 
@@ -78,6 +82,7 @@ img#victoryBanner {
 	position: absolute;
 	top: 200px;
 	left: 15%;
+	width: 15%;
 }
  
 img#resource {
@@ -85,12 +90,13 @@ img#resource {
 	right: 0px;
 	top: 300px;
 	width: 18%;
-	
 }
 
 img#startgate {
 	position: relative;
 	left: 45%;
+	width: 20%;
+	max-width: 250px;
 }
 
 footer {
