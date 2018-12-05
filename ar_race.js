@@ -26,6 +26,8 @@ window.onload = init;
 
 function init(){
 	//initialize racer positions
+	orc.style.opacity = 1;
+	human.style.opacity = 1;
 	orc.style.left = "0px";
 	human.style.left = "0px";
 	
@@ -79,10 +81,12 @@ function winScreen(winner) {
 	
 	//based on winner, set victory message, banner, and display them
 	if (winner === "horde"){
+		human.style.opacity = 0;
 		victoryMessage.innerHTML = "Victory For the Horde!";
 		victoryMessage.style.color = "firebrick";
 		victoryBanner.src = "HordeBanner.png";
 	} else if (winner === "alliance") {
+		orc.style.opacity = 0;
 		victoryMessage.innerHTML = "Victory For the Alliance!";
 		victoryMessage.style.color = "mediumblue";
 		victoryBanner.src = "AllianceBanner.png";
