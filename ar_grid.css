@@ -8,10 +8,6 @@
 	Layout for page.
 */
 
-/*div{
-	outline: 1px solid red;
-}*/
-
 div.row {
 	clear: both;
 }
@@ -26,7 +22,7 @@ div[class^="col"] {
 	float: left;
 }
 
-div.col-1-10 {width: 10%;}
-div.col-4-5 {width: 80%;}
+div.col-1-5 {width: 10%;}
+div.col-3-5 {width: 80%;}
 
 

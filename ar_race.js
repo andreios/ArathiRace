@@ -12,6 +12,11 @@ var orc = document.getElementById("hordeRacer");
 var human = document.getElementById("allyRacer");
 var gate = document.getElementById("startgate");
 
+//get win screen elements
+var victoryMessage = document.getElementById("victoryMessage");
+var victoryBanner = document.getElementById("victoryBanner");
+var resetMessage = document.getElementById("resetMessage");
+	
 var loopClock;
 
 
@@ -42,7 +47,7 @@ function runRace(){
 	var winner = "";
 
 	//establishes target for victory
-	var threshold = (.8 * window.innerWidth)-200;
+	var threshold = (0.82 * window.innerWidth)-200;
 
 	advanceRacers(orc);
 	advanceRacers(human);
@@ -60,7 +65,7 @@ function advanceRacers(racer){
 	var racerPos = parseInt(racer.style.left);
 	
 	//generate random shift amount
-	var racerShift = Math.floor(20 * Math.random());
+	var racerShift = Math.floor(25 * Math.random());
 	
 	//apply shift
 	racerPos += racerShift;
@@ -70,7 +75,32 @@ function advanceRacers(racer){
 
 function winScreen(winner) {		
 	clearInterval(loopClock);
+	
+	//based on winner, set victory message, banner, and display them
+	if (winner === "horde"){
+		victoryMessage.innerHTML = "Victory For the Horde!";
+		victoryMessage.style.color = "red";
+		victoryBanner.src = "HordeBanner.png";
+//		victoryBanner.style.display = "table";
+	} else if (winner === "alliance") {
+		victoryMessage.innerHTML = "Victory For the Alliance!";
+		victoryMessage.style.color = "blue";
+		victoryBanner.src = "AllianceBanner.png";
+//		victoryBanner.style.display = "table";
+	}
+	resetMessage.innerHTML = "Click on the green portal to reset the race.";
+	
+	gate.onclick = raceReset;
 
+}
+
+function raceReset() {
+	gate.onclick = null;
+	victoryMessage.innerHTML = "";
+	resetMessage.innerHTML = "";
+	victoryBanner.src = "";
+	
 	init();
+
 }
 

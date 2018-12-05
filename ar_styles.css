@@ -14,7 +14,11 @@ html {
 	height: 100%;
 }
 
-header {
+h1 {
+	text-align: center;
+}
+
+h3 {
 	text-align: center;
 }
 
@@ -28,10 +32,8 @@ body {
 	margin-right: auto;
 	
 	background-image: url(ar_background.jpg);
-}
-
-div{
-	outline: 1px solid red;
+	background-attachment: fixed;
+	background-position: center bottom;
 }
 
 img#hordeRacer {
@@ -43,20 +45,12 @@ img#allyRacer {
 }
 
 
-img#hordeVictory {
+img#victoryBanner {
 	position: absolute;
 	top: 200px;
-	left: 45%;
-	display: none;
+	left: 25%;
 }
-
-img#allyVictory {
-	position: absolute;
-	top: 200px;
-	left: 45%;
-	display: none;
-}
-
+ 
 img#resource {
 	position: absolute;
 	right: 0px;
